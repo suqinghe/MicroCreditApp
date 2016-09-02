@@ -1,0 +1,64 @@
+<ion-view view-title="我的">
+	<ion-content>
+		<ion-list>
+			<div class="card" ng-repeat="x in list">
+				<div ng-if="x.realservicefeerate!=9&&x.realservicefeerate!=7">
+					<div class="item item-divider" style="background-image: url('img/rect_red.png');background-repeat: no-repeat;">
+						{{x.creditproductname}}
+					</div>
+					<div class="item item-text-wrap">
+						<table style="width:100%;">
+							<tr>
+								<td style="width:15%;">利率</td>
+								<td style="width:15%;">期限</td>
+								<td style="width:25%;">贷款日期</td>
+								<td style="width:25%;">还款日期</td>
+								<td style="width:20%;">服务费</td>
+							</tr>
+							<tr>
+								<td>{{x.realservicefeerate}}%</td>
+								<td>12天</td>
+								<td>{{x.dateofapplication | date:'yyyy.MM.dd'}}</td>
+								<td>2016.08.13</td>
+								<td>210元</td>
+							</tr>
+						</table>
+					</div>
+					<div class="item item-divider">
+						<a  href="#/tab/payment/2/{{x.orderid}}/{{x.loannumbers}}"  style="float:right;">
+						<button class="button" style="float:right;font-size: small;border-radius: 20px;border: solid 1px #FF8685;color:#FF8685;min-height: 30px;line-height: 20px;" >
+							去还款>
+						</button> </a>
+					</div>
+				</div>
+				<div ng-if="x.realservicefeerate==9">
+					<div class="card">
+						<div class="item item-divider" style="background-image: url('img/rect_green.png');background-repeat: no-repeat;">
+							{{x.creditproductname}}
+						</div>
+						<div class="item item-text-wrap">
+							<table  style="width:100%;">
+								<tr>
+									<td style="width:20%;">金额</td>
+									<td style="width:20%;">利息</td>
+									<td style="width:20%;">还款期限</td>
+								</tr>
+								<tr>
+									<td>100元</td>
+									<td>10%</td>
+									<td>2016.09.21</td>
+								</tr>
+							</table>
+						</div>
+						<div class="item item-divider">
+
+							<button class="button"  style="float:right;font-size: small;border-radius: 20px;border: solid 1px #79BE33;color:#79BE33;min-height: 30px;line-height: 20px;" >
+								已还清
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ion-list>
+	</ion-content>
+</ion-view>

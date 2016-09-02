@@ -1,0 +1,24 @@
+<ion-view view-title="设置">
+	<ion-content>
+		<ion-list>
+
+			<ion-item class="item item-avatar  item-icon-right" >
+				<img ng-src="img/bg_user.png" alt="">
+				<h2>众网金贷</h2>
+				<p>
+					众网金贷
+				</p>
+				<i class="icon ion-chevron-right icon-accessory"></i>
+			</ion-item>
+			<ion-item class="item-divider"></ion-item>
+			<ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-href="#/tab/bindingCard">
+				绑定银行卡
+				<i class="icon ion-chevron-right icon-accessory"></i>
+			</ion-item>
+			<div class="padding">
+				<a class="button button-full button-assertive"  ng-click="logout()">退出登录</a>
+			</div>
+
+		</ion-list>
+	</ion-content>
+</ion-view>
