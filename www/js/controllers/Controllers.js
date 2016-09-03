@@ -11,17 +11,14 @@ angular.module('starter.controllers', [])
 			$ionicHistory.clearHistory();
 		});
 
- 
+
 
 		$scope.login = function() {
-			$http.post(HOST2 + "imitationShy/login.do", $scope.user, {
-				'Content-Type': 'application/x-www-form-urlencoded'
-			}).success(function(response) {
+			var url = HOST2 + "imitationShy/login.do";
+			$http.post(url, $scope.user).success(function(response) {
 				if (response.success) {
 					$http.post(HOST2 + "imitationShy/customerinfo.do", {
 						"mobile": $scope.user.mobile
-					}, {
-						'Content-Type': 'application/x-www-form-urlencoded'
 					}).success(function(response) {
 						if (response.success) {
 							var item = angular.fromJson(response);
