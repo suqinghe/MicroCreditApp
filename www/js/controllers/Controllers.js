@@ -14,11 +14,8 @@ angular.module('starter.controllers', [])
 
 
 		$scope.login = function() {
-			alert(1);
 			var url = HOST2 + "imitationShy/login.do";
-			 
 			$http.post(url, $scope.user).success(function(response) {
-				alert(2);
 				if (response.success) {
 					$http.post(HOST2 + "imitationShy/customerinfo.do", {
 						"mobile": $scope.user.mobile
