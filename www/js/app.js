@@ -11,8 +11,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCookies']).run(fun
 			}
 		});
 	})
-	.constant('HOST', "http://113.207.110.2:8680/")//业务接口
-	.constant('HOST2', "http://113.207.110.2:8680/")//后台支持接口
+	.constant('HOST', "http://115.28.180.117:8180/")//业务接口
+	.constant('HOST2', "http://115.28.180.117:8080/")//后台支持接口
 	.config(function($stateProvider, $urlRouterProvider) {
 		$stateProvider.state('tab', {
 			url: '/tab',
